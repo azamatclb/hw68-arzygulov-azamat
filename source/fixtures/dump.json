@@ -1,420 +1,552 @@
 [
-{
+  {
+    "model": "webapp.article",
+    "pk": 1,
+    "fields": {
+      "created_at": "2024-08-19T07:51:37.842Z",
+      "updated_at": "2024-08-19T12:36:03.345Z",
+      "title": "Homework 68",
+      "content": "Homework 68",
+      "status": "new",
+      "likes_count": 2,
+      "author": 1,
+      "liked_by": [
+        5,
+        1
+      ]
+    }
+  },
+  {
     "model": "webapp.article",
     "pk": 27,
     "fields": {
-        "created_at": "2024-07-01T14:53:20.574Z",
-        "updated_at": "2024-07-17T14:21:11.910Z",
-        "title": "Article1",
-        "content": "lorem",
-        "status": "new",
-        "author": 1
+      "created_at": "2024-07-01T14:53:20.574Z",
+      "updated_at": "2024-07-17T14:21:11.910Z",
+      "title": "Article1",
+      "content": "lorem",
+      "status": "new",
+      "likes_count": 0,
+      "author": 1,
+      "liked_by": []
     }
-},
-{
+  },
+  {
     "model": "webapp.article",
     "pk": 35,
     "fields": {
-        "created_at": "2024-07-03T14:26:41.852Z",
-        "updated_at": "2024-07-10T13:33:42.550Z",
-        "title": "Статья8",
-        "content": "Статья8",
-        "status": "new",
-        "author": 1
+      "created_at": "2024-07-03T14:26:41.852Z",
+      "updated_at": "2024-07-10T13:33:42.550Z",
+      "title": "Статья8",
+      "content": "Статья8",
+      "status": "new",
+      "likes_count": 0,
+      "author": 1,
+      "liked_by": []
     }
-},
-{
+  },
+  {
     "model": "webapp.article",
     "pk": 39,
     "fields": {
-        "created_at": "2024-07-04T13:13:13.754Z",
-        "updated_at": "2024-07-04T13:21:53.514Z",
-        "title": "Статья7",
-        "content": "lorem",
-        "status": "new",
-        "author": 1
+      "created_at": "2024-07-04T13:13:13.754Z",
+      "updated_at": "2024-07-04T13:21:53.514Z",
+      "title": "Статья7",
+      "content": "lorem",
+      "status": "new",
+      "likes_count": 0,
+      "author": 1,
+      "liked_by": []
     }
-},
-{
+  },
+  {
     "model": "webapp.article",
     "pk": 46,
     "fields": {
-        "created_at": "2024-07-08T13:05:18.792Z",
-        "updated_at": "2024-07-10T13:33:02.945Z",
-        "title": "Статья2",
-        "content": "lorem",
-        "status": "new",
-        "author": 1
+      "created_at": "2024-07-08T13:05:18.792Z",
+      "updated_at": "2024-07-10T13:33:02.945Z",
+      "title": "Статья2",
+      "content": "lorem",
+      "status": "new",
+      "likes_count": 0,
+      "author": 1,
+      "liked_by": []
     }
-},
-{
+  },
+  {
     "model": "webapp.article",
     "pk": 51,
     "fields": {
-        "created_at": "2024-07-10T14:49:11.705Z",
-        "updated_at": "2024-07-10T14:49:11.705Z",
-        "title": "Статья3",
-        "content": "lorem",
-        "status": "new",
-        "author": 1
+      "created_at": "2024-07-10T14:49:11.705Z",
+      "updated_at": "2024-07-10T14:49:11.705Z",
+      "title": "Статья3",
+      "content": "lorem",
+      "status": "new",
+      "likes_count": 0,
+      "author": 1,
+      "liked_by": []
     }
-},
-{
+  },
+  {
     "model": "webapp.article",
     "pk": 52,
     "fields": {
-        "created_at": "2024-07-10T14:54:07.810Z",
-        "updated_at": "2024-07-10T14:54:07.810Z",
-        "title": "Статья4",
-        "content": "lorem",
-        "status": "new",
-        "author": 1
+      "created_at": "2024-07-10T14:54:07.810Z",
+      "updated_at": "2024-07-10T14:54:07.810Z",
+      "title": "Статья4",
+      "content": "lorem",
+      "status": "new",
+      "likes_count": 0,
+      "author": 1,
+      "liked_by": []
     }
-},
-{
+  },
+  {
     "model": "webapp.article",
     "pk": 53,
     "fields": {
-        "created_at": "2024-07-10T14:55:38.700Z",
-        "updated_at": "2024-07-18T13:33:03.221Z",
-        "title": "Статья555",
-        "content": "lorem",
-        "status": "new",
-        "author": 1
+      "created_at": "2024-07-10T14:55:38.700Z",
+      "updated_at": "2024-08-19T12:13:04.261Z",
+      "title": "Статья555",
+      "content": "lorem",
+      "status": "new",
+      "likes_count": 1,
+      "author": 1,
+      "liked_by": [
+        1
+      ]
     }
-},
-{
+  },
+  {
     "model": "webapp.article",
     "pk": 54,
     "fields": {
-        "created_at": "2024-07-10T15:02:24.141Z",
-        "updated_at": "2024-07-10T15:02:24.141Z",
-        "title": "Статья6",
-        "content": "lorem",
-        "status": "new",
-        "author": 1
+      "created_at": "2024-07-10T15:02:24.141Z",
+      "updated_at": "2024-08-19T11:31:14.357Z",
+      "title": "Статья6",
+      "content": "lorem",
+      "status": "new",
+      "likes_count": 2,
+      "author": 1,
+      "liked_by": [
+        1,
+        5
+      ]
     }
-},
-{
+  },
+  {
     "model": "webapp.article",
     "pk": 58,
     "fields": {
-        "created_at": "2024-07-22T14:56:42.695Z",
-        "updated_at": "2024-07-25T14:17:49.115Z",
-        "title": "xzxxxxsss",
-        "content": "x",
-        "status": "new",
-        "author": 1
+      "created_at": "2024-07-22T14:56:42.695Z",
+      "updated_at": "2024-08-19T12:37:20.762Z",
+      "title": "xzxxxxsss",
+      "content": "x",
+      "status": "new",
+      "likes_count": 2,
+      "author": 1,
+      "liked_by": [
+        1,
+        5
+      ]
     }
-},
-{
+  },
+  {
     "model": "webapp.article",
     "pk": 59,
     "fields": {
-        "created_at": "2024-07-25T14:24:18.984Z",
-        "updated_at": "2024-07-25T14:25:49.818Z",
-        "title": "Tessssst",
-        "content": "sxaxsassss",
-        "status": "new",
-        "author": 4
+      "created_at": "2024-07-25T14:24:18.984Z",
+      "updated_at": "2024-08-19T12:08:59.093Z",
+      "title": "Tessssst",
+      "content": "sxaxsassss",
+      "status": "new",
+      "likes_count": 2,
+      "author": 4,
+      "liked_by": [
+        1,
+        5
+      ]
     }
-},
-{
+  },
+  {
     "model": "webapp.comment",
     "pk": 1,
     "fields": {
-        "created_at": "2024-07-11T17:33:16.514Z",
-        "updated_at": "2024-07-11T17:33:29.597Z",
-        "article": 27,
-        "text": "Текст",
-        "author": 1
+      "created_at": "2024-07-11T17:33:16.514Z",
+      "updated_at": "2024-07-11T17:33:29.597Z",
+      "article": 27,
+      "text": "Текст",
+      "likes_count": 0,
+      "author": 1,
+      "liked_by": []
     }
-},
-{
+  },
+  {
     "model": "webapp.comment",
     "pk": 2,
     "fields": {
-        "created_at": "2024-07-11T17:33:19.151Z",
-        "updated_at": "2024-07-11T17:33:30.314Z",
-        "article": 27,
-        "text": "ТекстТекст",
-        "author": 1
+      "created_at": "2024-07-11T17:33:19.151Z",
+      "updated_at": "2024-07-11T17:33:30.314Z",
+      "article": 27,
+      "text": "ТекстТекст",
+      "likes_count": 0,
+      "author": 1,
+      "liked_by": []
     }
-},
-{
+  },
+  {
     "model": "webapp.comment",
     "pk": 3,
     "fields": {
-        "created_at": "2024-07-11T17:33:19.836Z",
-        "updated_at": "2024-07-11T17:33:31.011Z",
-        "article": 51,
-        "text": "Текст",
-        "author": 1
+      "created_at": "2024-07-11T17:33:19.836Z",
+      "updated_at": "2024-07-11T17:33:31.011Z",
+      "article": 51,
+      "text": "Текст",
+      "likes_count": 0,
+      "author": 1,
+      "liked_by": []
     }
-},
-{
+  },
+  {
     "model": "webapp.comment",
     "pk": 4,
     "fields": {
-        "created_at": "2024-07-11T17:33:20.647Z",
-        "updated_at": "2024-07-11T17:33:31.704Z",
-        "article": 52,
-        "text": "Текст",
-        "author": 1
+      "created_at": "2024-07-11T17:33:20.647Z",
+      "updated_at": "2024-07-11T17:33:31.704Z",
+      "article": 52,
+      "text": "Текст",
+      "likes_count": 0,
+      "author": 1,
+      "liked_by": []
     }
-},
-{
+  },
+  {
     "model": "webapp.comment",
     "pk": 5,
     "fields": {
-        "created_at": "2024-07-11T17:33:21.379Z",
-        "updated_at": "2024-07-11T17:33:32.449Z",
-        "article": 52,
-        "text": "ыфсыфсыф",
-        "author": 1
+      "created_at": "2024-07-11T17:33:21.379Z",
+      "updated_at": "2024-07-11T17:33:32.449Z",
+      "article": 52,
+      "text": "ыфсыфсыф",
+      "likes_count": 0,
+      "author": 1,
+      "liked_by": []
     }
-},
-{
+  },
+  {
     "model": "webapp.comment",
     "pk": 7,
     "fields": {
-        "created_at": "2024-07-11T17:33:23.192Z",
-        "updated_at": "2024-07-11T17:33:33.845Z",
-        "article": 39,
-        "text": "Текст",
-        "author": 1
+      "created_at": "2024-07-11T17:33:23.192Z",
+      "updated_at": "2024-07-11T17:33:33.845Z",
+      "article": 39,
+      "text": "Текст",
+      "likes_count": 0,
+      "author": 1,
+      "liked_by": []
     }
-},
-{
+  },
+  {
     "model": "webapp.comment",
     "pk": 8,
     "fields": {
-        "created_at": "2024-07-11T17:33:23.952Z",
-        "updated_at": "2024-07-11T17:33:34.613Z",
-        "article": 39,
-        "text": "Текст",
-        "author": 1
+      "created_at": "2024-07-11T17:33:23.952Z",
+      "updated_at": "2024-07-11T17:33:34.613Z",
+      "article": 39,
+      "text": "Текст",
+      "likes_count": 0,
+      "author": 1,
+      "liked_by": []
     }
-},
-{
+  },
+  {
     "model": "webapp.comment",
     "pk": 9,
     "fields": {
-        "created_at": "2024-07-11T17:33:25.265Z",
-        "updated_at": "2024-07-11T17:33:35.358Z",
-        "article": 35,
-        "text": "Текст",
-        "author": 1
+      "created_at": "2024-07-11T17:33:25.265Z",
+      "updated_at": "2024-07-11T17:33:35.358Z",
+      "article": 35,
+      "text": "Текст",
+      "likes_count": 0,
+      "author": 1,
+      "liked_by": []
     }
-},
-{
+  },
+  {
     "model": "webapp.comment",
     "pk": 11,
     "fields": {
-        "created_at": "2024-07-11T17:33:26.837Z",
-        "updated_at": "2024-07-11T17:33:36.797Z",
-        "article": 46,
-        "text": "Текст",
-        "author": 1
+      "created_at": "2024-07-11T17:33:26.837Z",
+      "updated_at": "2024-07-11T17:33:36.797Z",
+      "article": 46,
+      "text": "Текст",
+      "likes_count": 0,
+      "author": 1,
+      "liked_by": []
     }
-},
-{
+  },
+  {
     "model": "webapp.comment",
     "pk": 12,
     "fields": {
-        "created_at": "2024-07-11T17:33:27.619Z",
-        "updated_at": "2024-07-11T17:33:37.487Z",
-        "article": 46,
-        "text": "Текст",
-        "author": 1
+      "created_at": "2024-07-11T17:33:27.619Z",
+      "updated_at": "2024-07-11T17:33:37.487Z",
+      "article": 46,
+      "text": "Текст",
+      "likes_count": 0,
+      "author": 1,
+      "liked_by": []
     }
-},
-{
+  },
+  {
     "model": "webapp.comment",
     "pk": 13,
     "fields": {
-        "created_at": "2024-07-18T13:54:13.060Z",
-        "updated_at": "2024-07-18T13:54:13.060Z",
-        "article": 46,
-        "text": "dsacascsa",
-        "author": 1
+      "created_at": "2024-07-18T13:54:13.060Z",
+      "updated_at": "2024-07-18T13:54:13.060Z",
+      "article": 46,
+      "text": "dsacascsa",
+      "likes_count": 0,
+      "author": 1,
+      "liked_by": []
     }
-},
-{
+  },
+  {
     "model": "webapp.comment",
     "pk": 17,
     "fields": {
-        "created_at": "2024-07-25T14:43:34.738Z",
-        "updated_at": "2024-07-25T14:43:34.738Z",
-        "article": 58,
-        "text": "xasxasxsa",
-        "author": 4
+      "created_at": "2024-07-25T14:43:34.738Z",
+      "updated_at": "2024-08-19T12:36:45.073Z",
+      "article": 58,
+      "text": "xasxasxsa",
+      "likes_count": 1,
+      "author": 4,
+      "liked_by": [
+        1
+      ]
     }
-},
-{
+  },
+  {
+    "model": "webapp.comment",
+    "pk": 18,
+    "fields": {
+      "created_at": "2024-08-19T09:34:47.560Z",
+      "updated_at": "2024-08-19T09:34:47.560Z",
+      "article": 53,
+      "text": "Comment like",
+      "likes_count": 0,
+      "author": 5,
+      "liked_by": []
+    }
+  },
+  {
+    "model": "webapp.comment",
+    "pk": 19,
+    "fields": {
+      "created_at": "2024-08-19T09:43:43.302Z",
+      "updated_at": "2024-08-19T12:29:43.267Z",
+      "article": 1,
+      "text": "comment like 2",
+      "likes_count": 2,
+      "author": 5,
+      "liked_by": [
+        1,
+        5
+      ]
+    }
+  },
+  {
+    "model": "webapp.comment",
+    "pk": 20,
+    "fields": {
+      "created_at": "2024-08-19T12:36:19.274Z",
+      "updated_at": "2024-08-19T12:37:14.784Z",
+      "article": 58,
+      "text": "Комметарий 2",
+      "likes_count": 2,
+      "author": 1,
+      "liked_by": [
+        1,
+        5
+      ]
+    }
+  },
+  {
+    "model": "webapp.comment",
+    "pk": 21,
+    "fields": {
+      "created_at": "2024-08-19T12:36:36.789Z",
+      "updated_at": "2024-08-19T12:36:36.789Z",
+      "article": 54,
+      "text": "Комментарий 3",
+      "likes_count": 0,
+      "author": 1,
+      "liked_by": []
+    }
+  },
+  {
     "model": "webapp.tag",
     "pk": 1,
     "fields": {
-        "created_at": "2024-07-11T17:29:19.834Z",
-        "updated_at": "2024-07-11T17:29:22.309Z",
-        "name": "Python"
+      "created_at": "2024-07-11T17:29:19.834Z",
+      "updated_at": "2024-07-11T17:29:22.309Z",
+      "name": "Python"
     }
-},
-{
+  },
+  {
     "model": "webapp.tag",
     "pk": 2,
     "fields": {
-        "created_at": "2024-07-11T17:29:38.787Z",
-        "updated_at": "2024-07-11T17:29:40.680Z",
-        "name": "Django"
+      "created_at": "2024-07-11T17:29:38.787Z",
+      "updated_at": "2024-07-11T17:29:40.680Z",
+      "name": "Django"
     }
-},
-{
+  },
+  {
     "model": "webapp.tag",
     "pk": 3,
     "fields": {
-        "created_at": "2024-07-11T17:29:49.510Z",
-        "updated_at": "2024-07-11T17:29:51.439Z",
-        "name": "Flask"
+      "created_at": "2024-07-11T17:29:49.510Z",
+      "updated_at": "2024-07-11T17:29:51.439Z",
+      "name": "Flask"
     }
-},
-{
+  },
+  {
     "model": "webapp.tag",
     "pk": 4,
     "fields": {
-        "created_at": "2024-07-11T17:30:01.931Z",
-        "updated_at": "2024-07-11T17:30:04.296Z",
-        "name": "Docker"
+      "created_at": "2024-07-11T17:30:01.931Z",
+      "updated_at": "2024-07-11T17:30:04.296Z",
+      "name": "Docker"
     }
-},
-{
+  },
+  {
     "model": "webapp.articletag",
     "pk": 3,
     "fields": {
-        "created_at": "2024-07-11T17:30:57.789Z",
-        "updated_at": "2024-07-11T17:30:59.467Z",
-        "article": 51,
-        "tag": 3
+      "created_at": "2024-07-11T17:30:57.789Z",
+      "updated_at": "2024-07-11T17:30:59.467Z",
+      "article": 51,
+      "tag": 3
     }
-},
-{
+  },
+  {
     "model": "webapp.articletag",
     "pk": 4,
     "fields": {
-        "created_at": "2024-07-11T17:31:11.336Z",
-        "updated_at": "2024-07-11T17:31:12.506Z",
-        "article": 52,
-        "tag": 3
+      "created_at": "2024-07-11T17:31:11.336Z",
+      "updated_at": "2024-07-11T17:31:12.506Z",
+      "article": 52,
+      "tag": 3
     }
-},
-{
+  },
+  {
     "model": "webapp.articletag",
     "pk": 5,
     "fields": {
-        "created_at": "2024-07-11T17:31:20.829Z",
-        "updated_at": "2024-07-11T17:31:22.373Z",
-        "article": 53,
-        "tag": 4
+      "created_at": "2024-07-11T17:31:20.829Z",
+      "updated_at": "2024-07-11T17:31:22.373Z",
+      "article": 53,
+      "tag": 4
     }
-},
-{
+  },
+  {
     "model": "webapp.articletag",
     "pk": 6,
     "fields": {
-        "created_at": "2024-07-11T17:31:35.626Z",
-        "updated_at": "2024-07-11T17:31:37.260Z",
-        "article": 53,
-        "tag": 1
+      "created_at": "2024-07-11T17:31:35.626Z",
+      "updated_at": "2024-07-11T17:31:37.260Z",
+      "article": 53,
+      "tag": 1
     }
-},
-{
+  },
+  {
     "model": "webapp.articletag",
     "pk": 7,
     "fields": {
-        "created_at": "2024-07-11T17:32:02.597Z",
-        "updated_at": "2024-07-11T17:32:04.557Z",
-        "article": 54,
-        "tag": 3
+      "created_at": "2024-07-11T17:32:02.597Z",
+      "updated_at": "2024-07-11T17:32:04.557Z",
+      "article": 54,
+      "tag": 3
     }
-},
-{
+  },
+  {
     "model": "webapp.articletag",
     "pk": 8,
     "fields": {
-        "created_at": "2024-07-11T17:32:06.888Z",
-        "updated_at": "2024-07-11T17:32:05.270Z",
-        "article": 39,
-        "tag": 2
+      "created_at": "2024-07-11T17:32:06.888Z",
+      "updated_at": "2024-07-11T17:32:05.270Z",
+      "article": 39,
+      "tag": 2
     }
-},
-{
+  },
+  {
     "model": "webapp.articletag",
     "pk": 9,
     "fields": {
-        "created_at": "2024-07-11T17:32:06.003Z",
-        "updated_at": "2024-07-11T17:32:10.937Z",
-        "article": 39,
-        "tag": 1
+      "created_at": "2024-07-11T17:32:06.003Z",
+      "updated_at": "2024-07-11T17:32:10.937Z",
+      "article": 39,
+      "tag": 1
     }
-},
-{
+  },
+  {
     "model": "webapp.articletag",
     "pk": 10,
     "fields": {
-        "created_at": "2024-07-11T17:32:08.065Z",
-        "updated_at": "2024-07-11T17:32:10.231Z",
-        "article": 27,
-        "tag": 4
+      "created_at": "2024-07-11T17:32:08.065Z",
+      "updated_at": "2024-07-11T17:32:10.231Z",
+      "article": 27,
+      "tag": 4
     }
-},
-{
+  },
+  {
     "model": "webapp.articletag",
     "pk": 11,
     "fields": {
-        "created_at": "2024-07-11T17:32:08.768Z",
-        "updated_at": "2024-07-11T17:32:09.588Z",
-        "article": 27,
-        "tag": 3
+      "created_at": "2024-07-11T17:32:08.768Z",
+      "updated_at": "2024-07-11T17:32:09.588Z",
+      "article": 27,
+      "tag": 3
     }
-},
-{
+  },
+  {
     "model": "webapp.articletag",
     "pk": 15,
     "fields": {
-        "created_at": "2024-07-18T13:33:03.231Z",
-        "updated_at": "2024-07-18T13:33:03.231Z",
-        "article": 53,
-        "tag": 2
+      "created_at": "2024-07-18T13:33:03.231Z",
+      "updated_at": "2024-07-18T13:33:03.231Z",
+      "article": 53,
+      "tag": 2
     }
-},
-{
+  },
+  {
     "model": "webapp.articletag",
     "pk": 16,
     "fields": {
-        "created_at": "2024-07-22T14:56:42.705Z",
-        "updated_at": "2024-07-22T14:56:42.705Z",
-        "article": 58,
-        "tag": 1
+      "created_at": "2024-07-22T14:56:42.705Z",
+      "updated_at": "2024-07-22T14:56:42.705Z",
+      "article": 58,
+      "tag": 1
     }
-},
-{
+  },
+  {
     "model": "webapp.articletag",
     "pk": 17,
     "fields": {
-        "created_at": "2024-07-25T14:24:19.003Z",
-        "updated_at": "2024-07-25T14:24:19.003Z",
-        "article": 59,
-        "tag": 2
+      "created_at": "2024-07-25T14:24:19.003Z",
+      "updated_at": "2024-07-25T14:24:19.003Z",
+      "article": 59,
+      "tag": 2
     }
-},
-{
+  },
+  {
     "model": "webapp.articletag",
     "pk": 18,
     "fields": {
-        "created_at": "2024-07-25T14:24:19.003Z",
-        "updated_at": "2024-07-25T14:24:19.003Z",
-        "article": 59,
-        "tag": 3
+      "created_at": "2024-07-25T14:24:19.003Z",
+      "updated_at": "2024-07-25T14:24:19.003Z",
+      "article": 59,
+      "tag": 3
     }
-}
+  }
 ]
