@@ -1,6 +1,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.core.exceptions import PermissionDenied
 from django.db.models import Q
+from django.http import JsonResponse
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.utils.http import urlencode
@@ -93,16 +94,16 @@ class DeleteArticleView(PermissionRequiredMixin, DeleteView):
 
 
 class ArticleLikeView(LoginRequiredMixin, View):
-    def post(self, request, *args, **kwargs):
-        article_id = request.POST.get('article_id')
+    def get(self, request, *args, **kwargs):
+        article_id = kwargs.get('article_id')
         article = get_object_or_404(Article, id=article_id)
 
-        if request.user not in article.liked_by.all():
-            article.liked_by.add(request.user)
-            article.likes_count += 1
-        else:
+        if request.user in article.liked_by.all():
             article.liked_by.remove(request.user)
             article.likes_count -= 1
-        article.save()
+        else:
+            article.liked_by.add(request.user)
+            article.likes_count += 1
 
-        return redirect('webapp:articles')
+        article.save()
+        return JsonResponse({'likes_count': article.likes_count})

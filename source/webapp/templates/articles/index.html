@@ -5,12 +5,12 @@
 {% endblock %}
 
 {% block content %}
-    {{ user }}
-    {{ request.user }}
-    <form method="get">
-        {% include "partial/search_form.html" with form=search_form %}
-    </form>
-    <br>
-    {% include 'partial/articles_list.html' %}
+    <div class="container mt-4">
+        {{ request.user }}
+        <form method="get">
+            {% include "partial/search_form.html" with form=search_form %}
+        </form>
+        <br>
+        {% include 'partial/articles_list.html' with articles=articles %}
+    </div>
 {% endblock %}
-

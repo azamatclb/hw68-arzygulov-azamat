@@ -29,6 +29,16 @@
                     Нет ни одного тега
                 {% endfor %}
             </p>
+            <div class="like-button">
+                <form method="get" action="{% url 'webapp:like_article' article.pk %}"
+                      data-url="{% url 'webapp:like_article' article.pk %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-link text-danger">
+                        <i class="bi bi-heart{% if request.user in article.liked_by.all %}-fill{% endif %}"></i>
+                    </button>
+                    <span class="likes-count">{{ article.likes_count }} Likes</span>
+                </form>
+            </div>
         </div>
     </div>
     {% if comments.exists %}
@@ -43,14 +53,15 @@
                        class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
                     <a href="{% url "webapp:delete_comment" comment.pk %}" class="btn btn-primary"><i
                             class="bi bi-trash3"></i></a>
-                    <form method="post" action="{% url 'webapp:like_comment' comment.id %}">
+                    <form method="get" action="{% url 'webapp:like_comment' comment.pk %}"
+                          data-url="{% url 'webapp:like_comment' comment.pk %}">
                         {% csrf_token %}
-                        <input type="hidden" name="comment_id" value="{{ comment.id }}">
                         <button type="submit" class="btn btn-link text-danger">
                             <i class="bi bi-heart{% if request.user in comment.liked_by.all %}-fill{% endif %}"></i>
                         </button>
-                        {{ comment.likes_count }} Likes <br>
+                        <span class="likes-count">{{ comment.likes_count }} Likes</span>
                     </form>
+
                 </div>
             </div>
         {% endfor %}

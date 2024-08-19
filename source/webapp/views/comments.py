@@ -1,4 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse
 from django.views.generic import CreateView, UpdateView, DeleteView, View
@@ -48,18 +49,16 @@ class DeleteCommentView(DeleteView):
 
 
 class CommentLikeView(LoginRequiredMixin, View):
-    def post(self, request, *args, **kwargs):
-        form = CommentLikeForm(request.POST)
-        if form.is_valid():
-            comment_id = form.cleaned_data.get('comment_id')
-            comment = get_object_or_404(Comment, id=comment_id)
+    def get(self, request, *args, **kwargs):
+        comment_id = kwargs.get('comment_id')
+        comment = get_object_or_404(Comment, id=comment_id)
 
-            if request.user not in comment.liked_by.all():
-                comment.liked_by.add(request.user)
-                comment.likes_count += 1
-            else:
-                comment.liked_by.remove(request.user)
-                comment.likes_count -= 1
-            comment.save()
+        if request.user in comment.liked_by.all():
+            comment.liked_by.remove(request.user)
+            comment.likes_count -= 1
+        else:
+            comment.liked_by.add(request.user)
+            comment.likes_count += 1
 
-        return redirect('webapp:article_detail', pk=comment.article.id)
+        comment.save()
+        return JsonResponse({'likes_count': comment.likes_count})
