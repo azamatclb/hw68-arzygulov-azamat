@@ -11,6 +11,8 @@ class Article(BaseModel):
     title = models.CharField(max_length=50, null=False, blank=False, verbose_name="Название")
     content = models.TextField(null=False, blank=False, verbose_name="Контент")
     status = models.CharField(max_length=20, choices=statuses, verbose_name="Статус", default=statuses[0][0])
+    likes_count = models.PositiveIntegerField(default=0)
+    liked_by = models.ManyToManyField(get_user_model(), related_name='liked_articles', blank=True)
 
     author = models.ForeignKey(
         get_user_model(),

@@ -2,7 +2,8 @@
 
 {% block links %}
     <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="{% url 'webapp:update_article' article.pk %}">Редактировать</a>
+        <a class="nav-link active" aria-current="page"
+           href="{% url 'webapp:update_article' article.pk %}">Редактировать</a>
     </li>
     <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="{% url 'webapp:delete_article' article.pk %}">Удалить</a>
@@ -14,7 +15,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="card mt-3 text-center" style="">
+    <div class="card mt-3 text-center">
         <div class="card-body">
             <h5 class="card-title">Название: {{ article.title }}</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Автор: {{ article.author }}</h6>
@@ -33,13 +34,25 @@
     {% if comments.exists %}
         <p>Комментарии: </p>
         {% for comment in comments %}
-            <p>{{ comment.text }}</p>
-            <p>{{ comment.author }}</p>
-            <p>{{ comment.created_at|date:"Y-m-d h:m:s" }}</p>
-            <a href="{% url "webapp:update_comment" comment.pk %}"
-                               class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
-            <a href="{% url "webapp:delete_comment" comment.pk %}" class="btn btn-primary"><i
-                                    class="bi bi-trash3"></i></a>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <p>{{ comment.text }}</p>
+                    <p>{{ comment.author }}</p>
+                    <p>{{ comment.created_at|date:"Y-m-d H:i:s" }}</p>
+                    <a href="{% url "webapp:update_comment" comment.pk %}"
+                       class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
+                    <a href="{% url "webapp:delete_comment" comment.pk %}" class="btn btn-primary"><i
+                            class="bi bi-trash3"></i></a>
+                    <form method="post" action="{% url 'webapp:like_comment' comment.id %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="comment_id" value="{{ comment.id }}">
+                        <button type="submit" class="btn btn-link text-danger">
+                            <i class="bi bi-heart{% if request.user in comment.liked_by.all %}-fill{% endif %}"></i>
+                        </button>
+                        {{ comment.likes_count }} Likes <br>
+                    </form>
+                </div>
+            </div>
         {% endfor %}
     {% endif %}
 {% endblock %}

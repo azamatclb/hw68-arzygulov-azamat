@@ -1,12 +1,13 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.core.exceptions import PermissionDenied
 from django.db.models import Q
-from django.shortcuts import redirect
+from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.utils.http import urlencode
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, View
 
 from webapp.forms import ArticleForm, SearchForm
+from webapp.forms.like import ArticleLikeForm
 from webapp.models import Article
 
 
@@ -89,3 +90,19 @@ class DeleteArticleView(PermissionRequiredMixin, DeleteView):
 
     def has_permission(self):
         return super().has_permission() or self.request.user == self.get_object().author
+
+
+class ArticleLikeView(LoginRequiredMixin, View):
+    def post(self, request, *args, **kwargs):
+        article_id = request.POST.get('article_id')
+        article = get_object_or_404(Article, id=article_id)
+
+        if request.user not in article.liked_by.all():
+            article.liked_by.add(request.user)
+            article.likes_count += 1
+        else:
+            article.liked_by.remove(request.user)
+            article.likes_count -= 1
+        article.save()
+
+        return redirect('webapp:articles')
